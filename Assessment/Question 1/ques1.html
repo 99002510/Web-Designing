@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment 1</title>
+
+    <script src="./classes.js"></script>
+    <script src="./Common.js"></script>
+
+    <script>
+        function createObj(){
+            let id=parseInt($("reg").value)
+            let stdname=$("name").value
+            let semester=$("mylist").value
+            let date =$("stddob").value
+            let branch=$("brnch").value
+            let stdObj=new student(id,stdname,semester,date,branch)
+
+            let text=`<h2>The ID: ${stdObj.reg}</h2>
+            <h2>The Name: ${stdObj.name}</h2>
+            <p><h2>The Semester: ${stdObj.mylist}</h2></p>
+            <p><h2>The Date of Birth: ${stdObj.stddob}</h2></p>
+            <p><h2>The Branch: ${stdObj.brnch}</h2></p>`
+            $("pDisplay").innerHTML=text;
+        }
+    </script>
+</head>
+<body>
+    <form id="Student" >
+        <p>Student ID:<input type="number" id="reg"></p> <br>
+        <p> StudentName:<input type="text" id="name"></p><br>
+        <p>Enter Date-Of-Birth<input type="date" placeholder="Date of birth" id="stddob"></p><br>
+        <p>
+        <select id="mylist" onchange="ddfunc()">
+            <option >----Select Semester----</option>
+            <option value="0">1st</option>
+            <option value="1">2nd</option>
+            <option value="2">3rd</option>
+            <option value="3">4th</option>
+            <option value="4">5th</option>
+            <option value="5">6th</option>
+            <option value="6">7th</option>
+            <option value="7">8th</option>
+        </select>
+        </p><br>
+        <p>
+            Branch:<br>
+            <input type="radio" name="brnch">Computer Science and Engineering<br>
+            <input type="radio" name="brnch">Electronics and Communication Engineering<br>
+            <input type="radio" name="brnch">Mechanical Engineering<br>
+            <input type="radio" name="brnch">Civil Engineering
+        </p>
+        <p><button onclick="createObj()">Submit</button></p>
+    
+    </form>
+    <div>
+        <h2>Details of the Student that are given:</h2>
+        <p id="pDisplay"></p>
+    </div>
+      
+</body>
+</html>
