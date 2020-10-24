@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Empire",
+        "city": "Mysuru",
+        "type": "Non-Veg",
+        "cuisine": ["Indian", "chinese"]
+    },
+    {
+        "name": "Sutra Bistro",
+        "city": "Mysore",
+        "type": "Veg",
+        "cuisine": ["Indian","Italian"]
+    },
+    {
+        "name": "Lemon Three",
+        "city": "Bangalore",
+        "type": "Non-Veg",
+        "cuisine": ["Indian"]
+    }
+]
